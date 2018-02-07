@@ -9,8 +9,27 @@ const app = express();
 
 const users = require('./routes/users');
 
+//config file that use to access to the database
+const config = require('./config/database');
+
+//connecting to the database
+mongoose.connect(config.database);
+
+//succeeful connection
+mongoose.connection.on('connected' ,()=>{
+    console.log('successfully connect to ',config.database);
+})
+
+//catching the error while to connect to database
+mongoose.connection.on('error' ,(error)=>{
+    console.log(error.message);
+})
+
 //Cors middleware
 app.use(cors());
+
+//setup the static folder that we should use for the angular file
+app.use(express.static(path.join(__dirname , 'public')));
 
 //add the user router
 app.use('/users' , users);
@@ -18,7 +37,7 @@ app.use('/users' , users);
 //bodyparser middleware
 app.use(bodyParser.json());
 app.get('/' , (req,res)=>{
-    res.send('this is the error and we should fix that later');
+    res.sendFile('index.html');
 })
 
 const port = 3001;

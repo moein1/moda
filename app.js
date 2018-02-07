@@ -12,6 +12,9 @@ const users = require('./routes/users');
 //config file that use to access to the database
 const config = require('./config/database');
 
+//bodyparser middleware
+app.use(bodyParser.json());
+
 //connecting to the database
 mongoose.connect(config.database);
 
@@ -34,8 +37,7 @@ app.use(express.static(path.join(__dirname , 'public')));
 //add the user router
 app.use('/users' , users);
 
-//bodyparser middleware
-app.use(bodyParser.json());
+
 app.get('/' , (req,res)=>{
     res.sendFile('index.html');
 })

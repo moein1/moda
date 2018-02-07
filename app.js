@@ -7,8 +7,16 @@ const mongoose = require('mongoose');
 
 const app = express();
 
+const users = require('./routes/users');
+
+//Cors middleware
 app.use(cors());
 
+//add the user router
+app.use('/users' , users);
+
+//bodyparser middleware
+app.use(bodyParser.json());
 app.get('/' , (req,res)=>{
     res.send('this is the error and we should fix that later');
 })

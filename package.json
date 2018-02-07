@@ -1,0 +1,25 @@
+{
+  "name": "moda",
+  "version": "1.0.0",
+  "description": "mean stack application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moein1/moda.git"
+  },
+  "keywords": [
+    "angular4",
+    "node",
+    "express",
+    "mongodb"
+  ],
+  "author": "mohammad",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/moein1/moda/issues"
+  },
+  "homepage": "https://github.com/moein1/moda#readme"
+}

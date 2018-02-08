@@ -29,5 +29,12 @@ module.exports={
             })
         })
        
+    },
+    comparePassword : (password , hashPassword ,callback )=>{
+        bcrypt.compare(password ,hashPassword ,(err, isMatch)=>{
+            if(err)
+                callback(err);
+            callback(null , isMatch);
+        })
     }
 }

@@ -15,6 +15,11 @@ const config = require('./config/database');
 //bodyparser middleware
 app.use(bodyParser.json());
 
+//passport initialize for working with token 
+app.use(passport.initialize());
+app.use(passport.session());
+require('./config/passport')(passport);
+
 //connecting to the database
 mongoose.connect(config.database);
 

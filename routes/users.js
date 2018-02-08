@@ -37,7 +37,7 @@ router.post('/authenticate', (req, res, next) => {
                         {email:user.email,
                         username : user.username,
                         name : user,
-                        _id : user._id}, 'mysecret', {
+                        _id : user._id}, config.secret, {
                         expiresIn: 200 //this is in second
                     });
                     res.json({success: true,
@@ -58,8 +58,8 @@ router.post('/authenticate', (req, res, next) => {
 })
 
 //Profile
-router.get('/profile', (req, res, next) => {
-    res.send('profile');
+router.get('/profile', passport.authenticate('jwt', { session: false }) , (req, res, next) => {
+    res.json({user : req.user}) 
 })
 
 module.exports = router;

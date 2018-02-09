@@ -32,5 +32,8 @@ nav{
        &:hover{
            color: $blue-color;
        }
+       &.active{
+           color :$blue-color;
+       }
    }
 }

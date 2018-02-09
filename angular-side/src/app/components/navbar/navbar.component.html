@@ -5,20 +5,20 @@
   <div class="navbar-left">
     <ul>
       <li>
-        <a href="">Home</a>
+        <a [routerLinkActive] ="['active']" [routerLinkActiveOptions] ="{exact : true}" [routerLink] = "['/']" href="">Home</a>
       </li>
       <li>
-        <a href="">Profile</a>
+        <a  [routerLinkActive] ="['active']" [routerLink] = "['/profile']" >Profile</a>
       </li>
     </ul>
   </div>
   <div class="navbar-right">
     <ul>
       <li>
-        <a href="">Login</a>
+        <a [routerLinkActive] ="['active']" [routerLink] ="['/login']" >Login</a>
       </li>
       <li>
-        <a href="">Register</a>
+        <a [routerLinkActive] ="['active']" [routerLink] ="['/register']" >Register</a>
       </li>
     </ul>
   </div>

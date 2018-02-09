@@ -1,0 +1,36 @@
+nav{
+    display: flex;
+    height: 60px;
+    background: $black-color;
+    color: $white-color;
+    justify-content: space-around;
+    align-items: center;
+    .navbar-brand{
+        flex-basis: 10%;
+        margin-left: 30px;
+        color : $blue-color;
+    }
+    .navbar-left{
+        flex-basis: 40%;
+    }
+    .navbar-right{
+        flex-basis: 40%;
+        ul{
+            justify-content: flex-end;
+        }
+    }
+    ul{
+        display: flex;
+        li{
+            margin: 0 20px;
+        }        
+    }
+   a{
+       color : $white-color;
+       font-size: 1.3rem;
+       transition : color ease 400ms;
+       &:hover{
+           color: $blue-color;
+       }
+   }
+}

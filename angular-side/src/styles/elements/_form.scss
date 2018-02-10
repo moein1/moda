@@ -3,7 +3,6 @@
     label{
         font-size : 1.1rem;
         font-weight: bold;
-        margin-bottom: 10px;
     }
     .form-control{
         width: 90%;
@@ -12,5 +11,6 @@
         border-radius:2px;
         border: 1px solid $gray-color;
         font-size: 1.1rem;
+        margin-top: 10px;
     }
 }

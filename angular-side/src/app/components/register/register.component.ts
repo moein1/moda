@@ -28,7 +28,7 @@ export class RegisterComponent implements OnInit {
         .flashMessageService
         .show('Please fill the fields', {
           timeout: 2000,
-          cssClass: 'invalid'
+          cssClass: 'alert-danger'
         });
         return false;
     }
@@ -37,24 +37,23 @@ export class RegisterComponent implements OnInit {
         .flashMessageService
         .show('Email is not valid', {
           timeout: 2000,
-          cssClass: 'invalid'
+          cssClass: 'alert-danger'
         });
         return false;
     }
 
     this.authService.registerUser(user).subscribe(data=>{
-      console.log(data);
       if(data.success){
         this.flashMessageService.show('You are now registered and can login',{
           timeout : 2000,
-          cssClass : 'invalid'
+          cssClass : 'alert-success'
         })
         this.router.navigate(['/login']);
       }else{
         this.flashMessageService.show('Somethings went wrong ',
       {
         timeout : 2000,
-        cssClass : 'invalid'
+        cssClass : 'alert-danger'
       });
       this.router.navigate(['/register']);
       }

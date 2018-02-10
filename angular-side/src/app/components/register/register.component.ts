@@ -23,7 +23,7 @@ export class RegisterComponent implements OnInit {
       email: this.email,
       password: this.password
     }
-    if (!this.validateService.validateRegister(user)) {
+    if (!this.validateService.validateInput(user)) {
       this
         .flashMessageService
         .show('Please fill the fields', {

@@ -5,11 +5,15 @@ export class ValidateService {
 
   constructor() { }
 
-  validateRegister=(user)=>{    
-    if(!user.name || !user.username || !user.email || !user.password){
-      return false;
+   validateInput = (input)=>{
+    let result = true;
+    for (const key in input) {
+      if (input.hasOwnProperty(key)) {
+          if(!input[key])
+            result = false && result;      
+      }
     }
-    return true;
+    return result;
   }
 
   validateEmail = (email)=>{

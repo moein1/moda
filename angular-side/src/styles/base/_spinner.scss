@@ -1,0 +1,19 @@
+.spinner{
+  @include spinner;  
+    animation: spinner 500ms ease-in-out infinite;    
+    animation-delay: 100ms;
+    &:after{
+        content: '';        
+        @include spinner;
+        left: 150%;
+        animation: spinner 500ms ease-in-out infinite;        
+       // animation-delay: 200ms;
+    }
+    &:before{
+        content: '';
+        @include spinner;        
+        left: -50%;
+        animation: spinner 500ms ease-in-out infinite;
+        animation-delay: 300ms;
+    }
+}

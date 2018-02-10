@@ -1,3 +1,15 @@
 @mixin transition($prop , $duration){
     transition: $prop $duration ease;
 }
+
+@mixin alert($color){
+    color : $white-color;
+    background: $color;
+    text-align: center;
+    margin: 30px auto;
+    max-width: 500px;
+    padding: 10px 0;
+    border-radius: 3px;
+    font-size: 1.3rem;
+    display: block;
+}

@@ -1,10 +1,11 @@
 @import './base/variable';
+@import './base/keyframe';
 @import './base/mixins';
 @import './base/base';
 @import './base/validate';
+@import './base/spinner';
 @import  './elements/buttons';
 @import  './elements/form';
 @import './component/header';
 @import './component/navbar';
 @import './component/showcase';
-@import './component/register';

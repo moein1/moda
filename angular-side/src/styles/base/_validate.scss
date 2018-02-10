@@ -1,11 +1,7 @@
-.invalid{
-    color : $white-color;
-    background: $danger-color;
-    text-align: center;
-    margin: 30px auto;
-    max-width: 500px;
-    padding: 10px 0;
-    border-radius: 3px;
-    font-size: 1.3rem;
-    display: block;
+.alert-danger{
+   @include alert($danger-color);
+}
+
+.alert-success{
+    @include alert($success-color);
 }

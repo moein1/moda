@@ -1,0 +1,14 @@
+.submit-button{
+    padding: 10px 0;
+    font-size: 1rem;
+    color: $white-color;
+    background: darken($blue-color , 40%);
+    outline: none;
+    border: none;   
+    width: 90%;
+    border-radius: 2px;
+    @include transition(background , 400ms);
+    &:hover{
+        background: darken($blue-color, 50%);
+    }
+}

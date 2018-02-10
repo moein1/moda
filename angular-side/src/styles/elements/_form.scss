@@ -1,0 +1,16 @@
+.form-group{
+    margin-bottom: 20px;
+    label{
+        font-size : 1.1rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    .form-control{
+        width: 90%;
+        display: block;
+        padding : 10px;
+        border-radius:2px;
+        border: 1px solid $gray-color;
+        font-size: 1.1rem;
+    }
+}

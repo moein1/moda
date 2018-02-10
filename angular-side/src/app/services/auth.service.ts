@@ -7,15 +7,26 @@ export class AuthService {
 
   authToken :any;
   user : any;
+  apiUrl = 'http://localhost:3001/users/';
 
   constructor(private http : Http ) { }
 
+  addheader = ()=>{
+    let headers = new Headers();
+    headers.append('Content-Type' , 'application/json');
+    return headers;
+  }
+
   registerUser = (user)=>{
-    let headers =  new Headers();
-    headers.append('Content-Type' ,'application/json');
     return this.http.
-    post('http://localhost:3001/users/register' ,
-     user ,{headers : headers}).map(response =>response.json());
+    post(`${this.apiUrl}/register`,
+     user ,{headers : this.addheader()}).map(response =>response.json());
+  }
+
+  loginUser = (auth)=>{
+    return this.http.
+    post(`${this.apiUrl}/login` ,
+     auth).map(respoonse =>respoonse.json());
   }
 
 }

@@ -1,0 +1,41 @@
+.showcase{    
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    height: 70vh;
+    background: lighten($black-color, 5%);
+    color: $white-color;
+    line-height: 2;
+    .showcase-content{
+        text-align: center;
+        h1{
+           font-size: 3rem;
+           text-transform: uppercase;
+           color: $blue-color;
+        }
+        p{
+            font-size: 2rem;
+            margin-bottom: 20px;
+            letter-spacing: .1rem;
+        }
+        a{           
+            padding: 10px;
+            color: $blue-color;
+            font-size: 1.5rem;
+            @include transition(color , 400ms);
+            &:hover{
+                color : $white-color;
+            }
+            &:first-child{                
+                @include transition(background , 400ms);
+                background: $blue-color;
+                color :$black-color;
+                &:hover{
+                    background: $white-color;
+                }
+            }
+
+        }
+    }
+   
+}

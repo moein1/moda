@@ -28,7 +28,7 @@ nav{
    a{
        color : $white-color;
        font-size: 1.3rem;
-       transition : color ease 400ms;
+       @include transition(color ,400ms);
        &:hover{
            color: $blue-color;
        }

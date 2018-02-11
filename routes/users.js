@@ -38,7 +38,7 @@ router.post('/authenticate', (req, res, next) => {
                         username : user.username,
                         name : user,
                         _id : user._id}, config.secret, {
-                        expiresIn: 200 //this is in second
+                        expiresIn: 3600 //this is in second
                     });
                     res.json({success: true,
                          token: 'JWT '+ token,

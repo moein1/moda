@@ -9,7 +9,9 @@ export class LoginComponent implements OnInit {
   username : string;
   password : string;
   showSpinner : boolean;
-  constructor(private validateSerive : ValidateService, private flashMessageService : FlashMessagesService, private authService : AuthService, private router : Router) {}
+  constructor(private validateSerive : ValidateService, 
+    private flashMessageService : FlashMessagesService,
+     private authService : AuthService, private router : Router) {}
 
   onLogin = () => {
     const auth = {
@@ -52,7 +54,6 @@ export class LoginComponent implements OnInit {
           this
             .router
             .navigate([nextUrl]);
-          console.log(response);
         })
     }
   }

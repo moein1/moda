@@ -42,7 +42,7 @@ const appRoutes : Routes=[
     RouterModule.forRoot(appRoutes),
     FlashMessagesModule.forRoot()
   ],
-  providers: [ValidateService,AuthService],
+  providers: [ValidateService,AuthService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

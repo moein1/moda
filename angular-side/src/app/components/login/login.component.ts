@@ -13,7 +13,7 @@ export class LoginComponent implements OnInit {
     private flashMessageService : FlashMessagesService,
      private authService : AuthService, private router : Router) {}
 
-  onLogin = () => {
+  onLogin = () =>  {
     const auth = {
       username: this.username,
       password: this.password

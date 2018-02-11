@@ -23,10 +23,17 @@ export class AuthService {
      user ,{headers : this.addheader()}).map(response =>response.json());
   }
 
-  loginUser = (auth)=>{
+  authenticatesUser = (auth)=>{
     return this.http.
-    post(`${this.apiUrl}/login` ,
+    post(`${this.apiUrl}/authenticate` ,
      auth).map(respoonse =>respoonse.json());
+  }
+
+  storeUserData = (token , user)=>{
+    localStorage.setItem('id_token' , token);
+    localStorage.setItem('user' , JSON.stringify(user));
+    this.authToken = token;
+    this.user = user;
   }
 
 }

@@ -6,8 +6,7 @@
         content: '';        
         @include spinner;
         left: 150%;
-        animation: spinner 500ms ease-in-out infinite;        
-       // animation-delay: 200ms;
+        animation: spinner 500ms ease-in-out infinite; 
     }
     &:before{
         content: '';

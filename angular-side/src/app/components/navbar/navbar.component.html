@@ -7,21 +7,25 @@
       <li>
         <a [routerLinkActive] ="['active']" [routerLinkActiveOptions] ="{exact : true}" [routerLink] = "['/']" href="">Home</a>
       </li>
-      <li>
-        <a  [routerLinkActive] ="['active']" [routerLink] = "['/profile']" >Profile</a>
-      </li>
+     
     </ul>
   </div>
   <div class="navbar-right">
     <ul>
-      <li>
-        <a [routerLinkActive] ="['active']" [routerLink] ="['/login']" >Login</a>
+        <li *ngIf="authService.loggedIn()">
+            <a   [routerLinkActive] ="['active']" [routerLink] = "['/profile']" >Profile</a>
+          </li>
+          <li *ngIf="authService.loggedIn()">
+            <a  [routerLinkActive]="['active']" [routerLink] ="['/dashboard']" >Dashboard</a>
+          </li>
+      <li *ngIf = "!authService.loggedIn()">
+        <a  [routerLinkActive] ="['active']" [routerLink] ="['/login']" >Login</a>
       </li>
-      <li>
-        <a [routerLinkActive] ="['active']" [routerLink] ="['/register']" >Register</a>
+      <li *ngIf = "!authService.loggedIn()">
+        <a  [routerLinkActive] ="['active']" [routerLink] ="['/register']" >Register</a>
       </li>
-      <li>
-        <a href="#" (click) = "onLogout()" >Logout</a>
+      <li *ngIf ="authService.loggedIn()">
+        <a  href="#" (click) = "onLogout()" >Logout</a>
       </li>
     </ul>
   </div>

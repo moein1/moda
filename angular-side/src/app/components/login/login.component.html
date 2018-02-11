@@ -1,6 +1,8 @@
 <section class="form-default">
-  <h2>Login</h2>
-  <div class="spinner" *ngIf="showSpinner" ></div>
+  <h2>Login</h2>  
+  <div class="backdrop"  *ngIf="showSpinner" >  
+  </div>
+  <div class="spinner" *ngIf="showSpinner"></div>
   <form (ngSubmit)="onLogin()" >
     <div class="form-group">
       <label>User Name</label>

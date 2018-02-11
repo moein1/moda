@@ -10,6 +10,7 @@ export class RegisterComponent implements OnInit {
   username : string;
   email : string;
   password : string;
+  showSpinner : boolean = false;
 
   constructor(private validateService : ValidateService, 
     private flashMessageService : FlashMessagesService,
@@ -41,13 +42,14 @@ export class RegisterComponent implements OnInit {
         });
         return false;
     }
-
+    this.showSpinner = true;
     this.authService.registerUser(user).subscribe(data=>{
       if(data.success){
         this.flashMessageService.show('You are now registered and can login',{
           timeout : 2000,
           cssClass : 'alert-success'
         })
+        this.showSpinner = false;
         this.router.navigate(['/login']);
       }else{
         this.flashMessageService.show('Somethings went wrong ',
@@ -55,6 +57,7 @@ export class RegisterComponent implements OnInit {
         timeout : 2000,
         cssClass : 'alert-danger'
       });
+      this.showSpinner = false;
       this.router.navigate(['/register']);
       }
     })

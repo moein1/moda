@@ -12,7 +12,7 @@ import { HomeComponent } from './components/home/home.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { ValidateService } from 'app/services/validate.service';
-import {FlashMessagesModule} from 'angular2-flash-messages';
+import {FlashMessagesModule} from 'angular2-flash-messages//module';
 import { AuthService } from 'app/services/auth.service';
 import { AuthGuard } from 'app/guards/auth.guard';
 

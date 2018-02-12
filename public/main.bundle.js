@@ -725,7 +725,7 @@ var AuthService = /** @class */ (function () {
     function AuthService(http) {
         var _this = this;
         this.http = http;
-        this.apiUrl = 'users/';
+        this.apiUrl = 'users';
         this.addheader = function () {
             var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
             headers.append('Content-Type', 'application/json');

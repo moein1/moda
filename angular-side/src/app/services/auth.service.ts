@@ -8,7 +8,7 @@ export class AuthService {
 
   authToken :any;
   user : any;
-  apiUrl = 'http://localhost:3001/users/';
+  apiUrl = 'users/';
 
   constructor(private http : Http) { }
 

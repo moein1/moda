@@ -8,7 +8,7 @@ export class AuthService {
 
   authToken :any;
   user : any;
-  apiUrl = 'users/';
+  apiUrl = 'users';
 
   constructor(private http : Http) { }
 

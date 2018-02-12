@@ -48,6 +48,10 @@ app.get('/' , (req,res)=>{
     res.sendFile('index.html');
 })
 
+app.get('*' ,(req,res)=>{
+    res.sendFile(path.join(__dirname , 'public/index.html'));
+} )
+
 const port = 3001;
 
 app.listen(port , ()=>{

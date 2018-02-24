@@ -5,6 +5,7 @@ export class ValidateService {
 
   constructor() { }
 
+  //validation for the blank data
    validateInput = (input)=>{
     let result = true;
     for (const key in input) {

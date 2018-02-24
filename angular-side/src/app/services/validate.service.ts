@@ -19,7 +19,7 @@ export class ValidateService {
 
   //validate the email address
   validateEmail = (email)=>{
-    var re = /\S+@\S+\.\S+/;
+    var re = /^[a-z]+(\.?[a-z])*@[a-z]+([a-z]+\.)+[a-z]+$/;
     return re.test(email);
   }
 

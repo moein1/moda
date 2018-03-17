@@ -15,6 +15,7 @@ import { ValidateService } from 'app/services/validate.service';
 import {FlashMessagesModule} from 'angular2-flash-messages//module';
 import { AuthService } from 'app/services/auth.service';
 import { AuthGuard } from 'app/guards/auth.guard';
+import { DevComponent } from './components/dev/dev.component';
 
 
 //routing
@@ -34,7 +35,8 @@ const appRoutes : Routes=[
     RegisterComponent,
     HomeComponent,
     DashboardComponent,
-    ProfileComponent
+    ProfileComponent,
+    DevComponent
   ],
   imports: [
     BrowserModule,

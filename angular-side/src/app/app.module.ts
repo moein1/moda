@@ -16,6 +16,7 @@ import {FlashMessagesModule} from 'angular2-flash-messages//module';
 import { AuthService } from 'app/services/auth.service';
 import { AuthGuard } from 'app/guards/auth.guard';
 import { DevComponent } from './components/dev/dev.component';
+import { MohammadComponent } from './components/mohammad/mohammad.component';
 
 
 //routing
@@ -36,7 +37,8 @@ const appRoutes : Routes=[
     HomeComponent,
     DashboardComponent,
     ProfileComponent,
-    DevComponent
+    DevComponent,
+    MohammadComponent
   ],
   imports: [
     BrowserModule,
